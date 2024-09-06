@@ -37,14 +37,25 @@ print(f"And Voila, the sum of your favorite numbers is : {sum_of_input}")
 
 #Determining if the sum of input is a prime number or composite number. 
 
+prime = True
 if sum_of_input <= 1:
-    print("And the sum of your favorite numbers is not a prime number.")
-elif sum_of_input <= 3:
-    print("And the sum of your favorite numbers is a prime number.")
-elif sum_of_input % 2 == 0 or sum_of_input % 3 == 0 or sum_of_input % 5 == 0 or sum_of_input % (5 + 2) == 0: 
-    print("And the sum of your favorite numbers is a composite number.")
-else: 
-    print("The sum of your favorite numbers is also a Prime Number!!! WOW")
+    prime = False
+for number in range(2, sum_of_input):
+    if sum_of_input % number == 0:
+        prime = False
+if prime:
+    print("The sum of your favorite numbers is a prime number.")
+else:
+    print("The sum of your favorite numbers is a composite number.")
+
+# #if sum_of_input <= 1:
+#     print("And the sum of your favorite numbers is not a prime number.")
+# elif sum_of_input <= 3:
+#     print("And the sum of your favorite numbers is a prime number.")
+# elif sum_of_input % 2 == 0 or sum_of_input % 3 == 0 or sum_of_input % 5 == 0 or sum_of_input % (5 + 2) == 0: 
+#     print("And the sum of your favorite numbers is a composite number.")
+# else: 
+#     print("The sum of your favorite numbers is also a Prime Number!!! WOW")
 
  
 
